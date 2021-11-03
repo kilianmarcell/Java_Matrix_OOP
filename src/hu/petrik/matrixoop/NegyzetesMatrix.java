@@ -23,6 +23,7 @@ public class NegyzetesMatrix extends Matrix {
         int osszeg = 0;
         for (int i = 0; i < matrix.length; i++) {
             osszeg += matrix[matrix.length-i][i];
+            osszeg += matrix[matrix.length-i][i];
         }
         return osszeg;
     }
