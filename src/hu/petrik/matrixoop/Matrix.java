@@ -1,5 +1,7 @@
 package hu.petrik.matrixoop;
 
+import java.util.Arrays;
+
 public class Matrix {
 
     private int sorokSzama;
@@ -22,5 +24,27 @@ public class Matrix {
                 this.matrix[i][j] = (int)(Math.random() * 90) + 10;
             }
         }
+    }
+
+    public boolean negyzetesE() {
+        //if (matrix.length == matrix[0].length) {
+        //    return true;
+        //} else {
+        //    return false;
+        //}
+
+        return this.sorokSzama == this.oszlopokSzama;
+    }
+
+    @Override
+    public String toString() {
+        String s = "";
+        for (int i = 0; i < this.sorokSzama; i++) {
+            for (int j = 0; j < this.oszlopokSzama; j++) {
+                s += matrix[i][j] + " ";
+            }
+            s += "\n";
+        }
+        return s;
     }
 }
